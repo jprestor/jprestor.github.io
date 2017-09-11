@@ -25,7 +25,7 @@
 		</nav>
 	</header>
 
-	<main class="page-main">
+	<main>
 		<section class="app-downloads">
 			<a href="#" class="btn"></a>
 			<img src="" class="app-downloads__apple">
@@ -51,12 +51,12 @@
 		</section>
 
 		<section class="reviews">
+			<h2 class="reviews__title  visually-hidden">Отзывы о нас</h2>
 			<div class="slider">
-				<h2 class="reviews__title  visually-hidden">Отзывы о нас</h2>
 				<input type="radio" name="reviews" id="reviews-input-1" class="slider__input" checked>
 				<input type="radio" name="reviews" id="reviews-input-2" class="slider__input">
 				<input type="radio" name="reviews" id="reviews-input-3" class="slider__input">
-				<div class="reviews__list">
+				<div class="reviews__list  slider__list">
 					<blockquote class="reviews__item  slider__item">
 						<cite class="reviews__author">Николай Петров</cite>
 						<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
@@ -69,23 +69,78 @@
 						<cite class="reviews__author">Николай Петров</cite>
 						<p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 					</blockquote>
-					<button class="reviews__prev"></button>
-					<button class="reviews__next"></button>
 				</div>
 				<div class="slider-toggles">
-						<label class="slider__toggle" for="reviews-input-1"></label>
-						<label class="slider__toggle" for="reviews-input-2"></label>
-						<label class="slider__toggle" for="reviews-input-3"></label>
-					</div>
+					<label class="slider__toggle" for="reviews-input-1"></label>
+					<label class="slider__toggle" for="reviews-input-2"></label>
+					<label class="slider__toggle" for="reviews-input-3"></label>
+				</div>
 			</div>
 		</section>
-		
+
 		<section class="prices">
+			<h2 class="prices__title  visually-hidden">Наши цены</h2>
 			<div class="slider">
-				
+				<input type="radio" name="prices" id="prices-input-1" class="slider__input" checked>
+				<input type="radio" name="prices" id="prices-input-2" class="slider__input">
+				<input type="radio" name="prices" id="prices-input-3" class="slider__input">
+				<div class="slider__list">
+					<table class="prices__list">
+						<tr class="prices__tariffs">
+							<th></th>
+							<th>База</th>
+							<th>Стандарт</th>
+							<th>Анлим</th>
+						</tr>
+						<tr class="prices__option-1">
+							<td>Розовый фильтр</td>
+							<td>Розовый фильтр</td>
+							<td>Розовый фильтр</td>
+							<td>Розовый фильтр</td>
+						</tr>
+						<tr class="prices__option-2">
+							<td>Смайлики</td>
+							<td>Смайлики</td>
+							<td>Смайлики</td>
+							<td>Смайлики</td>
+						</tr>
+						<tr class="prices__option-3">
+							<td>Комментарии</td>
+							<td>Комментарии</td>
+							<td>Комментарии</td>
+							<td>Комментарии</td>
+						</tr>
+					</table>
+				</div>
+				<div class="slider-toggles">
+					<label class="slider__toggle" for="reviews-input-1"></label>
+					<label class="slider__toggle" for="reviews-input-2"></label>
+					<label class="slider__toggle" for="reviews-input-3"></label>
+				</div>
 			</div>
+		</section>
+
+		<section class="contacts">
+			<b class="contacts__title">
+				Остались вопросы?<br>
+				Свяжитесь с нами!</b>
+			<p class="contacts__number">Звоните:<br>
+				<a href="tel:+78125556666">+7(812)555-66-66</a>
+			</p>
+			<p class="contacts__mail">Пишите:<br> mail@htmlacademy.ru
+			</p>
+			<p class="contacts__adress">Приезжайте в гости:<br> ул. Большая Конюшенная, 19/8
+			</p>
+		</section>
+
+		<section class="map">
+			<img src="" alt="">
 		</section>
 	</main>
+
+	<footer class="page-footer">
+
+	</footer>
 </body>
 
 </html>
