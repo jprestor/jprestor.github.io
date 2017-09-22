@@ -1,9 +1,50 @@
-body {
-	font-size: 12px;
-	font-weight:bold;
-	height: inherit;
+@font-face {
+	font-family: 'Open Sans';
+	src: url('fonts/subset-OpenSans-Light.woff2') format('woff2'),
+		url('fonts/subset-OpenSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
 }
 
-.page {
+@font-face {
+	font-family: 'Open Sans';
+	src: url('fonts/subset-OpenSans-Bold.woff2') format('woff2'),
+		url('fonts/subset-OpenSans-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('fonts/subset-OpenSans-Regular.woff2') format('woff2'),
+		url('fonts/subset-OpenSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 30px;
+	font-family: 'Open Sans', "Arial", sans-serif;
+	color: #fff;
+	background-color: rosybrown;
+}
+
+img {
+	max-width: 100%;
 	height: auto;
 }
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+} 

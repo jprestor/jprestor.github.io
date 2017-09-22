@@ -1,0 +1,114 @@
+	@media @mobile-width-only {
+		.main-nav {
+			position: relative;
+		}
+		// ПЕРЕКЛЮЧАТЕЛЬ Меню
+		.main-nav__toggle {
+			position: absolute;
+			top: -40px;
+			right: 18px;
+			display: block;
+			height: 22px;
+			width: 50px;
+			font-size: 0;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+		}
+		// ГАМБУРГЕР
+		.main-nav--closed .main-nav__toggle::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 4px;
+			width: 50px;
+			background-color: #fff;
+			box-shadow: 0 9px 0 0 #fff, 0 18px 0 0 #fff;
+		}
+		.main-nav--closed .main-nav__toggle {
+			&:hover::before {
+				background-color: #d22856;
+				box-shadow: 0 9px 0 0 #d22856, 0 18px 0 0 #d22856;
+			}
+			&:active::before {
+				background-color: rgba(255, 255, 255, 0.3);
+				box-shadow: 0 9px 0 0 rgba(255, 255, 255, 0.3), 0 18px 0 0 rgba(255, 255, 255, 0.3);
+			}
+		}
+		// КРЕСТИК
+		.main-nav--opened .main-nav__toggle::before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			right: 10px;
+			height: 25px;
+			width: 4px;
+			transform: rotate(45deg);
+			background-color: #fff;
+		}
+		.main-nav--opened .main-nav__toggle {
+			&:hover::before {
+				background-color: #d22856;
+			}
+			&:active::before {
+				opacity: 0.4
+			}
+		}
+		.main-nav--opened .main-nav__toggle::after {
+			content: "";
+			position: absolute;
+			top: -2px;
+			right: 10px;
+			height: 25px;
+			width: 4px;
+			transform: rotate(-45deg);
+			background-color: #fff;
+		}
+		.main-nav--opened .main-nav__toggle {
+			&:hover::after {
+				background-color: #d22856;
+			}
+			&:active::after {
+				opacity: 0.4;
+			}
+		}
+		// СПИСОК Меню
+		.main-nav--closed .main-nav__list {
+			display: none;
+		}
+		.main-nav--nojs .main-nav__list {
+			display: block;
+		}
+		.main-nav__list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-size: 18px;
+			line-height: 32px;
+			color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			background-color: #2b3b4b;
+		}
+		.main-nav__item a {
+			display: block;
+			padding: 20px;
+			border-top: 1px solid #030303;
+			border-bottom: 1px solid #030303;
+			border-collapse: collapse;
+			box-shadow: inset 0 1px 0 0 #495562, inset 0 -1px 0 0 #495562;
+			text-decoration: none;
+			color: #fff;
+		}
+		.main-nav__item a[href] {
+			&:hover {
+				color: #d22856;
+			}
+			&:active {
+				box-shadow: inset 0 1px 0 0 rgba(73, 85, 95, 0.5), inset 0 -1px 0 0 rgba(73, 85, 95, 0.5);
+				color: rgba(210, 40, 86, 0.5);
+			}
+		}
+	} //от MEDIA

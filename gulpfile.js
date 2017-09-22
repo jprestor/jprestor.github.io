@@ -1,5 +1,4 @@
-
-var gulp = require('gulp');
+var gulp = require('gulp')
 var less = require('gulp-less');
 var minifyCss = require('gulp-minify-css');
 
@@ -11,14 +10,14 @@ gulp.task('less', function() {
 });
 
 //Минификация css
-gulp.task('mincss', function(){
-  gulp.src('css/style.css')
-    .pipe(minifyCss())
-    .pipe(gulp.dest('css'));
-});
+//gulp.task('mincss', function(){
+  //gulp.src('css/style.css')
+    //.pipe(minifyCss())
+		//.pipe(gulp.dest('css'));
+//});
 
 //Отслеживание
 gulp.task('watcher',function(){
-	  gulp.watch('less/styl.less', ['less']);
-    gulp.watch('css/style.css', ['mincss']);
-})
+	  gulp.watch('less/**/*.less', ['less']);
+    //gulp.watch('css/style.css', ['mincss']);
+});

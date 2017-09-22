@@ -1,0 +1,30 @@
+@media @mobile-width-only {
+	.page-header {
+		min-height: 464px;
+		margin: 0 auto;
+		background: url(../img/iphone-5-in-hand-png.png), url(../img/back-tablet@1x.png);
+		background-position: 50% 174px, center;
+		background-size: auto, cover;
+		background-repeat: no-repeat, no-repeat;
+	}
+	.page-header__logo {
+		height: 22px;
+		padding: 18px;
+  /*&:hover {
+			background-color: #d22856; 
+		}
+		&:active {
+			opacity: 30%; 
+		} */
+		&--closed {
+			background: rgba(0, 0, 0, 0.3);
+		}
+		&--opened {
+			background: #2b3b4b;
+		}
+	}
+	.page-header__logo img {
+		width: 75px;
+		height: 22px;
+	}
+}
