@@ -27,8 +27,11 @@ arrowLeft.addEventListener('click', function () {
 	if (arrowLeft.classList.contains('left-1')) {
 		arrowLeft.classList.remove('left-1');
 		arrowLeft.classList.add('left-2');
-	} else {
+	} else if (arrowLeft.classList.contains('left-2')) {
 		arrowLeft.classList.remove('left-2');
+		arrowLeft.classList.add('left-3');
+	} else {
+		arrowLeft.classList.remove('left-3');
 		arrowLeft.classList.add('left-1');
 	}
 });
@@ -37,8 +40,11 @@ arrowRight.addEventListener('click', function () {
 	if (arrowRight.classList.contains('right-1')) {
 		arrowRight.classList.remove('right-1');
 		arrowRight.classList.add('right-2');
-	} else {
+	} else if (arrowRight.classList.contains('right-2')) {
 		arrowRight.classList.remove('right-2');
+		arrowRight.classList.add('right-3');
+	} else {
+		arrowRight.classList.remove('right-3');
 		arrowRight.classList.add('right-1');
 	}
 });
