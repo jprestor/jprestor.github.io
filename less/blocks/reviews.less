@@ -1,6 +1,8 @@
 .reviews {
 	padding-top: 45px;
 	padding-bottom: 30px;
+	padding-left: 5%;
+	padding-right: 5%;
 	background-color: #fff;
 	color: #1d2631;
 }
@@ -23,25 +25,24 @@
 .reviews__item {
 	width: 33.3%;
 	text-align: center;
-	margin-bottom: 30px;
-	padding-left: 18px;
-	padding-right: 18px
 }
 
-.reviews__item cite {
+.reviews__author {
 	display: block;
 	font-style: normal;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 30px;
-	margin-bottom: 14px;
+	padding-bottom: 24px;
 	color: #000;
 }
 
 .reviews__item blockquote {
-	margin: 0px;
+	margin: 0;
+	padding-bottom: 30px;
 	font-size: 14px;
 	line-height: 30px;
+	color: #283645;
 }
 
 .reviews__controls {
@@ -49,6 +50,7 @@
 	justify-content: center;
 	align-items: center;
 }
+
 .reviews__control {
 	margin: 10px;
 	width: 6px;
@@ -74,4 +76,48 @@
 
 #reviews-btn-3:checked~.reviews__list {
 	transform: translate(-66.6%);
+}
+
+@media @tablet-width {
+	.reviews__item {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.reviews__author-info {
+		display: block;
+		font-size: 14px;
+		font-weight: 400;
+		color: #283645;
+	}
+	.reviews__item blockquote {
+		margin: 0;
+		padding-bottom: 30px;
+		font-size: 18px;
+		line-height: 30px;
+		color: #283645;
+	}
+}
+
+//СТРЕЛКИ СЛАЙДЕРА
+@media @desktop-width {
+	.reviews__arrow-left--1~.reviews__controls label[for="reviews-btn-1"],
+	.reviews__arrow-right--1~.reviews__controls label[for="reviews-btn-1"],
+	.reviews__arrow-left--2~.reviews__controls label[for="reviews-btn-2"],
+	.reviews__arrow-right--2~.reviews__controls label[for="reviews-btn-2"],
+	.reviews__arrow-left--3~.reviews__controls label[for="reviews-btn-3"],
+	.reviews__arrow-right--3~.reviews__controls label[for="reviews-btn-3"] {
+		border: 3px solid #1d2631;
+	}
+	.reviews__arrow-left--1~.reviews__list,
+	.reviews__arrow-right--1~.reviews__list {
+		transform: translate(0);
+	}
+	.reviews__arrow-left--2~.reviews__list,
+	.reviews__arrow-right--2~.reviews__list {
+		transform: translate(-33.3%);
+	}
+	.reviews__arrow-left--3~.reviews__list,
+	.reviews__arrow-right--3~.reviews__list, {
+		transform: translate(-66.6%);
+	}
 }

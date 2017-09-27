@@ -1,30 +1,63 @@
-@media @mobile-width-only {
 	.page-header {
 		min-height: 464px;
-		margin: 0 auto;
-		background: url(../img/iphone-5-in-hand-png.png), url(../img/back-tablet@1x.png);
+		background: url(../img/iphone-5-in-hand-png.png), url(../img/back-tablet@1x.jpg);
 		background-position: 50% 174px, center;
 		background-size: auto, cover;
 		background-repeat: no-repeat, no-repeat;
 	}
+	
 	.page-header__logo {
-		height: 22px;
 		padding: 18px;
-  /*&:hover {
-			background-color: #d22856; 
-		}
-		&:active {
-			opacity: 30%; 
-		} */
+		padding-left: 5%;
 		&--closed {
-			background: rgba(0, 0, 0, 0.3);
+			background: rgba(0, 0, 0, 0.4);
 		}
 		&--opened {
 			background: #2b3b4b;
 		}
 	}
+	
 	.page-header__logo img {
+		display: block;
 		width: 75px;
 		height: 22px;
+	}
+	
+	@media @tablet-width {
+		.page-header {
+			min-height: 730px;
+			background: url(../img/iphone-6-tablet.png), url(../img/back-tablet@1x.jpg);
+			background-position: 90% 200px, center;
+			background-size: auto, cover;
+			background-repeat: no-repeat, no-repeat;
+			/*		@media @retina {
+				background: url(../img/iphone-6-tablet2x.png), url(../img/back-tablet@2x.jpg);
+			} Если бы были файлы 2x */
+		}
+		.page-header__logo {
+			padding-top: 26px;
+			padding-bottom: 40px;
+			padding-right: 5%;
+			padding-left: 5%;
+			&--closed {
+				background: rgba(0, 0, 0, 0.4);
+			}
+			&--opened {
+				background: #2b3b4b;
+			}
+		}
+		.page-header__logo img {
+			width: 147px;
+			height: 40px;
+		}
+	}
+	
+	@media @desktop-width {
+		.page-header__logo {
+			padding-left: 10%;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		.page-header {
+			background-position: 80% 200px, center;
 	}
 }

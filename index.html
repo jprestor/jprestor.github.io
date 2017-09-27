@@ -4,15 +4,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link href="css/normalize" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-	<header class="page-header">
+	<header class="page-header" id="start">
 		<div class="page-header__logo page-header__logo--closed">
-			<img src="img/logo/logotype-white-mobile.png" width="75" height="22" alt="Pink">
+			<picture>
+				<source media="(min-width: 1024px)" srcset="img/logo/logotype-white-desktop.png">
+				<source media="(min-width: 700px)" srcset="img/logo/logotype-white-tablet.png">
+				<img src="img/logo/logotype-white-mobile.png" width="75" height="22" alt="Pink">
+			</picture>
 		</div>
 		<nav class="main-nav main-nav--closed main-nav--nojs">
 			<a class="main-nav__toggle"></a>
@@ -27,33 +31,46 @@
 
 	<main>
 		<section class="app-downloads">
+			<b class="app-downloads__slogan--mobile-hidden mobile-hidden">
+				Взгляните<br>
+				на жизнь<br>
+				иначе!
+			</b>
 			<a href="#" class="app-downloads__btn">Скачать приложение</a>
-			<div class="app-downloads__logo">
-				<img src="img/logo/apple-logo.png" class="app-downloads__logo-item" width="47" height="56">
-				<img src="img/logo/android-logo.png" class="app-downloads__logo-item" width="47" height="56">
-				<img src="img/logo/microsoft-logo.png" class="app-downloads__logo-item" width="47" height="56">
+			<div class="app-downloads__list">
+				<a href="https://www.apple.com/ru/shop/buy-iphone/iphone-x" class="app-downloads__apple"></a>
+				<a href="https://play.google.com/store" class="app-downloads__android"></a>
+				<a href="https://www.microsoft.com/ru-RU/store/apps/windows-phone" class="app-downloads__windows"></a>
 			</div>
 			<p class="app-downloads__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
 		</section>
 
 		<section class="slogan">
-			<p class="slogan-item">Устали от серости мегаполиса?</p>
-			<p class="slogan-item">Нам есть что вам предложить!</p>
+			<p class="slogan__item">Устали от серости мегаполиса?</p>
+			<p class="slogan__item">Нам есть, что вам <span class="slogan__item--wrap">предложить!</span></p>
 		</section>
 
 
 		<section class="features">
-			<div class="features__item">
-				<h2>Поднимает настроение</h2>
-				<p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+			<div class="features__list">
+				<div class="features__item features__item-1">
+					<h2>Поднимает настроение</h2>
+					<p>Приложение позволит вам победить <span class="features__item--wrapper">осеннюю хандру и депрессию буквально в </span>несколько кликов!</p>
+				</div>
+				<div class="features__item features__item-2">
+					<h2>Меняя мир вокруг</h2>
+					<p>Сделайте снимок и украсьте его смайликом <span class="features__item--wrapper">или текстовой подписью, чтобы </span>усилить эффект.</p>
+				</div>
+				<div class="features__item features__item-3">
+					<h2>Заводит новых друзей</h2>
+					<p>Ставьте лайки, комментируте, делитесь <span class="features__item--wrapper">фотографиями с друзьями и заводите новых.</span></p>
+				</div>
 			</div>
-			<div class="features__item">
-				<h2>Меняя мир вокруг</h2>
-				<p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-			</div>
-			<div class="features__item">
-				<h2>Заводит новых друзей</h2>
-				<p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+			<div class="features__item--mobile-hidden mobile-hidden">
+				<h2>Эффект <span class="features__item--wrapper">на 24 часа!</span></h2>
+				<p>Британские ученые провели исследования <span class="features__item--wrapper">и доказали, что положительный эффект</span> от использования приложения длится <span class="features__item--wrapper">целые сутки!</span>
+				</p>
+				<a href="#">Узнать больше об исследовании</a>
 			</div>
 		</section>
 
@@ -61,25 +78,30 @@
 			<h1 class="visually-hidden">Отзывы о нас</h1>
 			<div class="reviews__slider">
 
+				<button class="reviews__arrow-left left-1">sdasd</button>
+				<button class="reviews__arrow-right right-1">asdadssa</button>
+
 				<input class="reviews__input" type="radio" id="reviews-btn-1" name="toggle" checked>
 				<input class="reviews__input" type="radio" id="reviews-btn-2" name="toggle">
 				<input class="reviews__input" type="radio" id="reviews-btn-3" name="toggle">
 
 				<div class="reviews__list">
 					<div class="reviews__item">
-						<cite>Николай Петров</cite>
+						<cite class="reviews__author">Николай Петров
+						<span class="reviews__author-info mobile-hidden">25 лет, водитель трамвая</span></cite>
 						<blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
 					</div>
 					<div class="reviews__item">
-						<cite>Николай Петров</cite>
+						<cite class="reviews__author">Николай Петров
+						<span class="reviews__author-info mobile-hidden">25 лет, водитель трамвая</span></cite>
 						<blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
 					</div>
 					<div class="reviews__item">
-						<cite>Николай Петров</cite>
+						<cite class="reviews__author">Николай Петров
+						<span class="reviews__author-info mobile-hidden">25 лет, водитель трамвая</span></cite>
 						<blockquote>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
 					</div>
 				</div>
-
 
 				<div class="reviews__controls">
 					<label class="reviews__control" for="reviews-btn-1"></label>
@@ -103,11 +125,11 @@
 						<tr class="prices__row prices__tariffs">
 							<th></th>
 							<th>База<br>
-							<span>1,99 USD</span></th>
+								<span>1,99 USD</span></th>
 							<th>Стандарт<br>
-							<span>3,99 USD</span></th>
+								<span>3,99 USD</span></th>
 							<th>Анлим<br>
-							<span>9,99 USD</span></th>
+								<span>9,99 USD</span></th>
 						</tr>
 
 						<tr class="prices__row prices__option-1">
@@ -144,35 +166,56 @@
 
 		<section class="contacts">
 			<h2 class="contacts__title">
-				Остались вопросы?<br>
-				Свяжитесь с нами!
+				Остались вопросы?<br> Свяжитесь с нами!
 			</h2>
-				
+
 			<p class="contacts__number">Звоните:<br>
 				<a href="tel:+78125556666">+7(812)555-66-66</a>
 			</p>
-			
-			<p class="contacts__mail">Пишите:<br> 
+
+			<p class="contacts__mail">Пишите:<br>
 				<span>mail@htmlacademy.ru</span>
 			</p>
-			
+
 			<p class="contacts__adress">Приезжайте в гости:<br>
 				<span>ул. Большая<br> Конюшенная, 19/8</span>
 			</p>
-			
+
 		</section>
 
-		<section class="map">
-			<div class="yandex-map" id="yandex-map"></div>
+		<section class="map" id="yandex-map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A383f907658ef7e416d07436be6a0e439022adbb4251c89b86e5718d560fa185b&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 		</section>
 	</main>
 
 	<footer class="page-footer">
+		<a class="page-footer__logo" href="#start">
+			<picture class="page-footer__logo">
+				<source media="(min-width: 1024px)" srcset="img/logo/logotype-blue-desktop.png">
+				<img src="img/logo/logotype-blue-tablet.png" alt="Pink" width="147" height="40">
+			</picture>
+		</a>
 
+		<div class="social">
+			<a href="https://twitter.com/" class="social__item social__twitter">
+				Твиттер.
+			</a>
+			<a href="https://ru-ru.facebook.com/" class="social__item social__facebook">
+				Фэйсбук.
+			</a>
+			<a href="https://www.youtube.com/" class="social__item social__youtube">
+				Ютуб.
+			</a>
+		</div>
+		<div class="footer__copyright">
+			Дмитрий Мирошниченко<br> для
+			<a href="https://htmlacademy.ru/" class="footer__copyright-icon"></a>
+		</div>
 	</footer>
 
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/script.js"></script>
-	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A383f907658ef7e416d07436be6a0e439022adbb4251c89b86e5718d560fa185b&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+
 </body>
 
 </html>

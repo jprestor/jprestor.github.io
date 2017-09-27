@@ -1,23 +1,59 @@
 .slogan {
-	position: relative;
-	padding-top: 42px;
+	padding-top: 40px;
+	padding-bottom: 30px;
 	text-align: center;
+	font-size: 40px;
+	line-height: 48px;
 	background: #fff;
 	overflow: hidden;
-
 }
 
-.slogan-item {
+.slogan__item {
 	padding: 0;
 	margin: 0;
-	font-size: 24px;
-	line-height: 32px;
+	font-family: 'Open Sans';
+	font-weight: 300;
 	color: #2b3b4b;
 }
 
-.slogan-item:first-child {
-	margin-bottom: 30px;
+.slogan__item--wrap {
+	display: block;
 }
 
+@media @mobile-width-only {
+	.slogan {
+		padding-top: 42px;
+		padding-left: 5%;
+		padding-right: 5%;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: center;
+		background: #fff;
+		overflow: hidden;
+	}
+	.slogan__item {
+		padding: 0;
+		margin: 0;
+		color: #2b3b4b;
+	}
+	.slogan__item:first-child {
+		padding-bottom: 30px;
+	}
+	.slogan__item--wrap {
+		display: inline;
+	}
+}
 
+@media @tablet-width {
+	.slogan {
+		padding-bottom: 40px;
+	}
+}
 
+@media @desktop-width {
+	.slogan {
+		font-size: 50px;
+		line-height: 60px;
+		padding-bottom: 70px;
+	}
+}
