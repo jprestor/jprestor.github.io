@@ -1,0 +1,80 @@
+.cards {
+	background-color: #fff;
+	color: #283645;
+}
+
+.cards__item {
+	position: relative;
+	background: #f2f2f2;
+}
+
+.cards__author {
+	font-style: normal;
+	font-weight: 700;
+	color: black;
+}
+
+.cards__author span {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.cards__comment {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.cards__like {
+	color: #d22856;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 25px;
+		right: 5%;
+		width: 14px;
+		height: 12px;
+		background: url(../img/icon-heart.png);
+	}
+}
+
+@media @mobile-width-only {
+	.cards {
+		padding-top: 30px;
+	}
+	.cards__item {
+		width: 280px;
+		margin: 0 auto;
+	}
+	.cards__note {
+		padding: 5%;
+	}
+}
+
+@media @tablet-width {
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 5%;
+		padding-top: 30px;
+	}
+	.cards__item {
+		position: relative;
+		margin: 12px;
+		width: 300px;
+	}
+	.cards__note {
+		padding: 10%;
+		padding-top: 10px;
+		padding-bottom: 50px;
+	}
+	.cards__like {
+		position: absolute;
+		bottom: 20px;
+		&::before {
+			bottom: 10px;
+			right: -130px;
+		}
+	}
+}

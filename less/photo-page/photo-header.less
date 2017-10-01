@@ -1,0 +1,41 @@
+	.photo-header {
+		min-height: 235px;
+		background: url(../img/back-tablet@1x.jpg) no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.photo-header__title {
+		margin: 0px;
+		padding-top: 35px;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 300;
+		text-align: center;
+	}
+	
+	@media @tablet-width {
+		.photo-header {
+			min-height: 450px;
+			background: url(../img/back-tablet@1x.jpg);
+			background-position: center;
+		  background-size: cover;
+		}
+		.photo-header__title {
+			padding-top: 80px;
+			font-size: 50px;
+			line-height: 60px;
+		}
+	}
+	
+	@media @desktop-width {
+		.photo-header {
+			background: url(../img/back-desktop.jpg) no-repeat;
+			background-position: top;
+		  background-size: cover;
+		}
+		
+		.photo-header__title {
+			padding-top: 80px;
+		}
+	}
