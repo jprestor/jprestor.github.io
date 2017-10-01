@@ -1323,6 +1323,7 @@ img {
   .cards__item {
     width: 280px;
     margin: 0 auto;
+    margin-bottom: 20px;
   }
   .cards__note {
     padding: 5%;
