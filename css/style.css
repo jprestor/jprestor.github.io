@@ -1325,6 +1325,9 @@ img {
     margin: 0 auto;
     margin-bottom: 20px;
   }
+  .cards__item:last-child {
+    margin-bottom: 0;
+  }	
   .cards__note {
     padding: 5%;
   }
