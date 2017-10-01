@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="css/normalize" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<header class="photo-header" id="start">
+		<a href="index.html" class="page-header__logo page-header__logo--closed">
+			<picture>
+				<source media="(min-width: 1024px)" srcset="img/logo/logotype-white-desktop.png">
+				<source media="(min-width: 700px)" srcset="img/logo/logotype-white-tablet.png">
+				<img src="img/logo/logotype-white-mobile.png" width="75" height="22" alt="Pink">
+			</picture>
+		</a>
+		<nav class="main-nav main-nav--closed main-nav--nojs">
+			<a class="main-nav__toggle"></a>
+			<ul class="main-nav__list">
+				<li class="main-nav__item"><a href="index.html">Главная</a></li>
+				<li class="main-nav__item"><a href="index.html#reviews">Отзывы</a></li>
+				<li class="main-nav__item"><a href="index.html#prices">Цены</a></li>
+				<li class="main-nav__item"><a>Фотографии</a></li>
+			</ul>
+		</nav>
+		<h1 class="photo-header__title">
+			Фотографии<br> пользователей
+		</h1>
+	</header>
+
+	<main>
+		<section class="preview">
+			<p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+		</section>
+
+		<section class="panorama">
+			<h2 class="panorama__title">Панорама дня</h2>
+			<picture class="panorama__photo">
+				<source media="(min-width: 1024px)" srcset="img/panorama-desktop.jpg, img/panorama-desktop@2x.jpg 1.5x">
+				<source media="(min-width: 700px)" srcset="img/panorama-tablet.jpg, img/panorama-tablet@2x.jpg 1.5x">
+				<img src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg 1.5x" alt="panorama">
+			</picture>
+			<div class="panorama__note">
+				<cite class="panorama__author">Анна <span>(5 минут назад)</span></cite>
+				<blockquote class="panorama__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</blockquote>
+				<b class="panorama__like">Нравится: 215</b>
+			</div>
+		</section>
+
+		<section class="cards">
+			<div class="cards__item">
+				<picture class="cards__photo">
+					<source media="(min-width: 1024px)" srcset="img/photo/photo-1-desktop.jpg">
+					<source media="(min-width: 700px)" srcset="img/photo/photo-1-tablet.jpg">
+					<img src="img/photo/photo-1-mobile.jpg" alt="Pink">
+				</picture>
+				<div class="cards__note">
+					<cite class="cards__author">Левон <span>(5 часов назад)</span></cite>
+					<blockquote class="cards__comment">Вчера он на луну летал, сегодня в руки к нам попал.</blockquote>
+					<b class="cards__like">Нравится: 356</b>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<picture class="cards__photo">
+					<source media="(min-width: 1024px)" srcset="img/photo/photo-2-desktop.jpg">
+					<source media="(min-width: 700px)" srcset="img/photo/photo-2-tablet.jpg">
+					<img src="img/photo/photo-2-mobile.jpg" alt="Pink">
+				</picture>
+				<div class="cards__note">
+					<cite class="cards__author">Антон <span>(12 часов назад)</span></cite>
+					<blockquote class="cards__comment">Соседи будут рады!</blockquote>
+					<b class="cards__like">Нравится: 666</b>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<picture class="cards__photo">
+					<source media="(min-width: 1024px)" srcset="img/photo/photo-3-desktop.jpg">
+					<source media="(min-width: 700px)" srcset="img/photo/photo-3-tablet.jpg">
+					<img src="img/photo/photo-3-mobile.jpg" alt="Pink">
+				</picture>
+				<div class="cards__note">
+					<cite class="cards__author">Борис <span>(20 часов назад)</span></cite>
+					<blockquote class="cards__comment">Здесь могла быть ваша цитата о высоком и вечном.</blockquote>
+					<b class="cards__like">Нравится: 215</b>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<picture class="cards__photo">
+					<source media="(min-width: 1024px)" srcset="img/photo/photo-4-desktop.jpg">
+					<source media="(min-width: 700px)" srcset="img/photo/photo-4-tablet.jpg">
+					<img src="img/photo/photo-4-mobile.jpg" alt="Pink">
+				</picture>
+				<div class="cards__note">
+					<cite class="cards__author">Сергей <span>(25 часов назад)</span></cite>
+					<blockquote class="cards__comment">Самая кубанская в мире!</blockquote>
+					<b class="cards__like">Нравится: 48</b>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<picture class="cards__photo">
+					<source media="(min-width: 1024px)" srcset="img/photo/photo-5-desktop.jpg">
+					<source media="(min-width: 700px)" srcset="img/photo/photo-5-tablet.jpg">
+					<img src="img/photo/photo-5-mobile.jpg" alt="Pink">
+				</picture>
+				<div class="cards__note">
+					<cite class="cards__author">Максим <span>(40 часов назад)</span></cite>
+					<blockquote class="cards__comment">Где снег-то?</blockquote>
+					<b class="cards__like">Нравится: 150</b>
+				</div>
+			</div>
+
+			<div class="cards__item">
+				<picture class="cards__photo">
+					<source media="(min-width: 1024px)" srcset="img/photo/photo-6-desktop.jpg">
+					<source media="(min-width: 700px)" srcset="img/photo/photo-6-tablet.jpg">
+					<img src="img/photo/photo-6-mobile.jpg" alt="Pink">
+				</picture>
+				<div class="cards__note">
+					<cite class="cards__author">Надежда <span>(45 часов назад)</span></cite>
+					<blockquote class="cards__comment">Всем GM и взаимные лайки!</blockquote>
+					<b class="cards__like">Нравится: 2560</b>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="photo-slogan">
+			<p>Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+		</section>
+
+	</main>
+
+
+	<footer class="photo-footer">
+		<a class="page-footer__logo" href="index.html">
+			<picture class="page-footer__logo">
+				<source media="(min-width: 1024px)" srcset="img/logo/logotype-blue-desktop.png">
+				<img src="img/logo/logotype-blue-tablet.png" alt="Pink" width="147" height="40">
+			</picture>
+		</a>
+
+		<div class="social">
+			<a href="https://twitter.com/" class="social__item social__twitter">
+				Твиттер.
+			</a>
+			<a href="https://ru-ru.facebook.com/" class="social__item social__facebook">
+				Фэйсбук.
+			</a>
+			<a href="https://www.youtube.com/" class="social__item social__youtube">
+				Ютуб.
+			</a>
+		</div>
+		<div class="footer__copyright">
+			Дмитрий Мирошниченко<br> для
+			<a href="https://htmlacademy.ru/" class="footer__copyright-icon"></a>
+		</div>
+	</footer>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>

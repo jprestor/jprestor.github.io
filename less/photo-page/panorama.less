@@ -1,0 +1,101 @@
+.panorama {
+	position: relative;
+	background: #fff;
+}
+
+.panorama__photo img {
+	width: 100%;
+}
+
+.panorama__title {
+	position: absolute;
+	margin: 0;
+	padding: 0px 20px;
+	font-size: 12px;
+	line-height: 35px;
+	text-transform: uppercase;
+	background: #d22856;
+}
+
+.panorama__note {
+	position: relative;
+	width: 80%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin: -10px auto;
+	background: #f2f2f2;
+	color: #283645;
+}
+
+.panorama__author {
+	font-style: normal;
+	font-weight: 700;
+	color: black;
+}
+
+.panorama__author span {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.panorama__comment {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+.panorama__like {
+	color: #d22856;
+}
+
+@media @mobile-width-only {
+	.panorama__note {
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 25px;
+			right: 30px;
+			width: 14px;
+			height: 12px;
+			background: url(../img/icon-heart.png);
+		}
+	}
+	.panorama__title {
+		right: 20px;
+	}
+}
+
+@media @tablet-width {
+	.panorama__like {
+		position: absolute;
+		top: 20px;
+		right: 60px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 8px;
+			right: -30px;
+			width: 14px;
+			height: 12px;
+			background: url(../img/icon-heart.png);
+		}
+	}
+	
+	.panorama__note {
+		width: 70%;
+		padding-right: 15%;
+	}
+	
+	.panorama__title {
+		top: 56px;
+		right: 40px;
+	}
+}
+
+@media @desktop-width {
+	.panorama__title {
+		right: 132px;
+	}
+}
