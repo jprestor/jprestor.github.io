@@ -1,0 +1,212 @@
+	.prices {
+		overflow: hidden;
+		padding-bottom: 30px;
+		color: #1d2631;
+		background-color: #f2f2f2;
+		&:before {
+			content: "";
+			display: block;
+			box-sizing: border-box;
+			width: 100%;
+			margin-bottom: 65px;
+			border: 50px solid #fff;
+			border-right-color: transparent;
+			border-left: none;
+			border-bottom: none;
+			border-right-width: 699px;
+		}
+	}
+	
+	.prices__input {
+		display: none;
+	}
+	
+	.prices__row {
+		display: flex;
+		border-left: 2px solid #f2f2f2;
+		border-top: 2px solid #f2f2f2;
+		text-align: center;
+		box-sizing: border-box;
+	}
+	
+	.prices__row th {
+		padding: 20px;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 30px;
+		border-right: 2px solid #f2f2f2;
+		width: 25%;
+		background-color: #283645;
+		&:nth-child(3) {
+			position: relative;
+			overflow: hidden;
+		}
+		&:nth-child(3)::before {
+			content: "ХИТ";
+			position: absolute;
+			top: 9px;
+			left: -32px;
+			display: block;
+			padding: 0 40px;
+			transform: rotate(-45deg);
+			font-size: 14px;
+			font-weight: 300;
+			background-color: #d22856;
+		}
+	}
+	
+	.prices__row span {
+		text-transform: none;
+		font-size: 24px;
+		font-weight: 300;
+	}
+	
+	.prices__row td {
+		padding: 14px 1%;
+		width: 25%;
+		text-transform: uppercase;
+		text-align: left;
+		border-right: 1px solid #f2f2f2;
+		background-color: #fff;
+	}
+	
+	.prices__option-1 td,
+	.prices__option-2 td,
+	.prices__option-3 td {
+		position: relative;
+	}
+	
+	// ГАЛОЧКИ
+	.prices__option-1 td:not(:first-child)::before,
+	.prices__option-2 td:not(:first-child):not(:nth-child(2))::before,
+	.prices__option-3 td:last-child::before {
+		content: "";
+		position: absolute;
+		top: 12px;
+		right: 20px;
+		height: 14px;
+		width: 28px;
+		border-left: 4px solid #3dc644;
+		border-bottom: 4px solid #3dc644;
+		transform: rotate(-45deg);
+	}
+	
+	// КРЕСТИКИ
+	.prices__option-2 td:nth-child(2),
+	.prices__option-3 td:not(:first-child):not(:last-child) {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 12px;
+			right: 34px;
+			height: 38px;
+			width: 4px;
+			background: red;
+			transform: rotate(-45deg);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 12px;
+			right: 34px;
+			height: 38px;
+			width: 4px;
+			background: red;
+			transform: rotate(45deg);
+		}
+	} //
+	.prices__tariffs {
+		height: 98px;
+		color: #fff;
+	}
+	
+	@media @mobile-width-only {
+		.prices__table {
+			margin-bottom: 30px;
+			width: 400%;
+			border-bottom: 1px solid #f2f2f2;
+			border-collapse: collapse;
+			transition: transform 0.8s;
+		}
+		#prices-btn-1:checked~.prices__table {
+			transform: translate(-25%);
+		}
+		#prices-btn-2:checked~.prices__table {
+			transform: translate(-50%);
+		}
+		#prices-btn-3:checked~.prices__table {
+			transform: translate(-75%);
+		}
+		.prices__controls {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.prices__control {
+			margin: 10px;
+			width: 6px;
+			height: 6px;
+			background: #bec2c7;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		#prices-btn-1:checked~.prices__controls label[for="prices-btn-1"],
+		#prices-btn-2:checked~.prices__controls label[for="prices-btn-2"],
+		#prices-btn-3:checked~.prices__controls label[for="prices-btn-3"] {
+			border: 3px solid #1d2631;
+		}
+	}
+	
+	@media @tablet-width {
+		.prices {
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 65px;
+			&:before {
+				content: "";
+				display: block;
+				margin-bottom: 35px;
+				width: 100%;
+				border: 50px solid #fff;
+				border-right-color: transparent;
+				border-left: none;
+				border-bottom: none;
+				border-right-width: 1023px;
+			}
+			.prices__table {
+				padding-left: 5%;
+				padding-right: 5%;
+				width: 100%;
+				border-bottom: 1px solid #f2f2f2;
+				border-collapse: collapse;
+				transition: transform 0.8s;
+			}
+		}
+		//Центровка ГАЛОЧЕК
+		.prices__option-1 td:not(:first-child),
+		.prices__option-2 td:not(:first-child):not(:nth-child(2)),
+		.prices__option-3 td:last-child {
+			&::before {
+				right: 50%;
+				transform: translateX(50%) rotate(-45deg);
+			}
+		} //
+		//Центровка КРЕСТИКОВ
+		.prices__option-2 td:nth-child(2),
+		.prices__option-3 td:not(:first-child):not(:last-child) {
+			&::before {
+				right: 50%;
+			}
+			&::after {
+				right: 50%;
+			}
+		} //
+		//убрал повторение пунктов в ячейках
+		.prices__row th:first-child {
+			background-color: #f2f2f2;
+		} //
+		.prices__row td:not(:first-child) {
+			font-size: 0;
+		}
+	}

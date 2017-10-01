@@ -1,0 +1,171 @@
+	.main-nav {
+		position: relative;
+		z-index: 1;
+	}
+	
+	// ПЕРЕКЛЮЧАТЕЛЬ Меню
+	.main-nav__toggle {
+		position: absolute;
+		display: block;
+		top: -40px;
+		right: 5%;
+		height: 22px;
+		width: 50px;
+		font-size: 0;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+	}
+	
+	// ГАМБУРГЕР
+	.main-nav--closed .main-nav__toggle {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 4px;
+			width: 50px;
+			background-color: #fff;
+			box-shadow: 0 9px 0 0 #fff, 0 18px 0 0 #fff;
+		}
+		&:hover::before {
+			background-color: #d22856;
+			box-shadow: 0 9px 0 0 #d22856, 0 18px 0 0 #d22856;
+		}
+		&:active::before {
+			background-color: rgba(255, 255, 255, 0.3);
+			box-shadow: 0 9px 0 0 rgba(255, 255, 255, 0.3), 0 18px 0 0 rgba(255, 255, 255, 0.3);
+		}
+	}
+	
+	// КРЕСТИК
+	.main-nav--opened .main-nav__toggle {
+		&::before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			right: 10px;
+			height: 25px;
+			width: 4px;
+			transform: rotate(45deg);
+			background-color: #fff;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: -2px;
+			right: 10px;
+			height: 25px;
+			width: 4px;
+			transform: rotate(-45deg);
+			background-color: #fff;
+		}
+		&:hover::before {
+			background-color: #d22856;
+		}
+		&:hover::after {
+			background-color: #d22856;
+		}
+		&:active::before {
+			opacity: 0.4
+		}
+		&:active::after {
+			opacity: 0.4;
+		}
+	}
+	
+	// СПИСОК Меню
+	.main-nav--closed .main-nav__list {
+		display: none;
+	}
+	
+	.main-nav--nojs .main-nav__list {
+		display: block;
+	}
+	
+	.main-nav__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 18px;
+		line-height: 32px;
+		color: #fff;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: #2b3b4b;
+	}
+	
+	.main-nav__item a {
+		display: block;
+		padding: 20px;
+		border-top: 1px solid #030303;
+		border-bottom: 1px solid #030303;
+		box-shadow: inset 0 1px 0 0 #495562, inset 0 -1px 0 0 #495562;
+		text-decoration: none;
+		color: #fff;
+	}
+	
+	.main-nav__item a[href] {
+		&:hover {
+			color: #d22856;
+		}
+		&:active {
+			box-shadow: inset 0 1px 0 0 rgba(73, 85, 95, 0.5), inset 0 -1px 0 0 rgba(73, 85, 95, 0.5);
+			color: rgba(210, 40, 86, 0.5);
+		}
+	}
+	
+	@media @tablet-width {
+		.main-nav__toggle {
+			position: absolute;
+			top: -62px;
+			right: 30px;
+			display: block;
+			height: 22px;
+			width: 50px;
+			font-size: 0;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+		}
+	}
+	
+	@media @desktop-width {
+		.main-nav__toggle {
+			display: none;
+		}
+		.main-nav .main-nav__list {
+			position: absolute;
+			top: -104px;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			width: 75%;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 32px;
+			color: #fff;
+			text-transform: none;
+			background-color: transparent;
+		}
+		.main-nav__item a {
+			padding: 35px;
+			padding-left: 40px;
+			padding-right: 40px;
+			border: none;
+			box-shadow: none;
+			text-decoration: none;
+			color: #fff;
+		}
+		.main-nav__item a[href] {
+			&:hover {
+				color: #d22856;
+			}
+			&:active {
+				box-shadow: none;
+				color: rgba(210, 40, 86, 0.5);
+			}
+		}
+	}
