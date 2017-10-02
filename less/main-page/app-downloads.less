@@ -1,10 +1,3 @@
-.app-downloads {
-	position: absolute;
-	top: 240px;
-	left: 5%;
-	background-color: transparent;
-}
-
 .app-downloads__slogan--mobile-hidden {
 	display: block;
 	text-align: center;
@@ -83,9 +76,22 @@
 	}
 }
 
+@media @tablet-width {
+	.index-main {
+		position: relative;
+	}
+
+	.app-downloads {
+		position: absolute;
+		top: -510px;
+		left: 10%;
+		background-color: transparent;
+	}
+
+}
+
 @media @desktop-width {
 	.app-downloads {
-		left: 10%;
-		top: 250px;
+		top: -610px;
 	}
 }
