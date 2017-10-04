@@ -7,9 +7,9 @@
 	}
 	
 	.page-header__logo {
+		.container-fluid ();
 		display: block;
 		padding: 18px;
-		padding-left: 5%;
 		&--closed {
 			background: rgba(0, 0, 0, 0.4);
 		}
@@ -31,6 +31,7 @@
 			background-position: 90% 200px, center;
 			background-size: auto, cover;
 			background-repeat: no-repeat, no-repeat;
+			background-attachment: fixed;
 			/*		@media @retina {
 				background: url(../img/iphone-6-tablet2x.png), url(../img/back-tablet@2x.jpg);
 			} Если бы были файлы 2x */
@@ -38,8 +39,6 @@
 		.page-header__logo {
 			padding-top: 26px;
 			padding-bottom: 40px;
-			padding-right: 5%;
-			padding-left: 5%;
 		}
 		.page-header__logo img {
 			width: 147px;
@@ -54,9 +53,10 @@
 			background-position: 60% 210px, top;
 			background-size: auto, cover;
 			background-repeat: no-repeat, no-repeat;
+			background-attachment: fixed;
 		}
 		.page-header__logo {
-			padding-left: 10%;
+			
 			background: rgba(0, 0, 0, 0.5);
 		}
 	}
