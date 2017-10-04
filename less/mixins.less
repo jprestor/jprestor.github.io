@@ -5,13 +5,21 @@
 		width: 700px;
 	}
 	@media @desktop-width {
-		width: 1200px;
+		width: 1350px;
 	}
 }
 
 .container-fluid () {
+	@media @mobile-width-only {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	@media @tablet-width {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 	@media @desktop-width {
-		max-width: 1350px;
-		margin: 0 auto;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 }
